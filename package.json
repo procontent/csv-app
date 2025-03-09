@@ -1,0 +1,49 @@
+{
+  "name": "react-electron-app-CDF",
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vite build && tsc && electron-builder",
+    "debug": "tsc && electron --inspect=5858 ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "latest",
+    "papaparse": "latest",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "latest",
+    "electron": "^35.0.0"
+  },
+  "build": {
+    "appId": "com.react.electron.app",
+    "productName": "ReactElectronApp",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/main.js"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "devDependencies": {
+    "@types/papaparse": "^5.3.15",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "concurrently": "^9.1.2",
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.8.2",
+    "wait-on": "^8.0.2"
+  }
+}

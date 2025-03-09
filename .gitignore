@@ -1,0 +1,69 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs
+*.log
+yarn-error.log
+lerna-debug.log
+.npm/
+.npmrc
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+out/
+build/
+*.tsbuildinfo
+
+# Electron specific
+/.webpack
+/.devtron
+/.asar
+!src/**/*.asar
+
+# React specific
+/.next
+/.cache
+public/
+.vscode/
+
+# Testing
+/coverage
+/jest/
+/cypress/
+/*.snap
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.env.local
+.env
+.env.development
+.env.production
+.env.test
+.env.example
+
+# Ignore compiled TypeScript
+*.tsbuildinfo
+
+# Ignore editor-specific settings
+.vscode/
+*.code-workspace
+
+# Ignore temporary files
+*.tmp
+*.bak

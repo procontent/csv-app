@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "strict": true,
+    "types": ["node", "electron", "react", "react-dom"]
+  }
+}
